@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Lev Knyazev"/>
+        <meta name="description" content="Lev's Pure CSS image drawing"/>
+        <title>Pure CSS Image Drawing</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+        
+        <!-- The whole wrapper for the cartoon drawing -->
+        <div id="puff">  
+            
+            <!-- The outer hair of the face -->
+            <div id="outerHair">
+                
+                <!-- the hair part from the left side of the face -->
+                <div id="leftHair"></div>
+                
+                <!-- the hair part from the right side of the face -->
+                <div id="rightHair"></div>
+            </div>
+            
+            <!-- The outer face wrapper to fix divs placed on borders -->
+            <div id="outerFace"></div>
+            
+            <!-- Wrapper for the cartoon's face -->
+            <div id="face">
+                
+                <!-- Mask the border of the hair pieces -->
+                <div id="maskHair"></div>
+                
+                <!-- the left hair that covers the upper face -->
+                <div id="flatHairLeft"></div>
+                
+                <!-- the right hair that covers the upper face -->
+                <div id="flatHairRight"></div>
+                
+                <!-- Wrapper for the whole left Eye -->
+                <div class="eyeWrapper eyeLeft">
+                    
+                    <!-- the first part of the eye -->
+                    <div class="eyeCover"></div>
+                    
+                    <!-- the second part of the eye -->
+                    <div class="eyeInside"></div>
+                    
+                    <!-- the last part of the eye -->
+                    <div class="eye"></div>
+                </div>
+                
+                <!-- Wrapper for the whole right Eye -->
+                <div class="eyeWrapper eyeRight">
+                    
+                    <!-- the first part of the eye -->
+                    <div class="eyeCover"></div>
+                    
+                    <!-- the second part of the eye -->
+                    <div class="eyeInside"></div>
+                    
+                    <!-- the last part of the eye -->
+                    <div class="eye"></div>
+                </div>
+                
+                <!-- the nose part of the face -->
+                <div id="nose"></div>
+            </div>
+            
+            <!-- Wrapper for the cartoon's upper body -->
+            <div id="upperBody">
+                
+                <!-- the middle section of the body -->
+                <div id="middle"></div>
+                
+                <!-- the mask of the middle section of the body -->
+                <div id="maskMiddle"></div>
+            </div>
+            
+            <!-- Wrapper for the hands of the upper body -->
+            <div id="handsWrapper">
+                
+                <!-- the left hand of the body -->
+                <div id="leftHand"></div>
+                
+                <!-- the right hand of the body -->
+                <div id="rightHand"></div>
+            </div>
+            
+            <!-- Wrapper for the cartoon's lower body -->
+            <div id="lowerBody">
+                
+                <!-- seperation of the two legs with vertical line -->
+                <div id="legMiddle"></div>
+                
+                <!-- the left feet section of the lower body -->
+                <div id="leftFeet">
+                    
+                    <!-- Small decoration for the feet -->
+                    <div class="feetDecoration"></div>
+                </div>
+                
+                <!-- the right feet section of the lower body -->
+                <div id="rightFeet">
+                
+                    <!-- Small decoration for the feet -->
+                    <div class="feetDecoration"></div>
+                </div>
+            </div>
+        </div>
+        <br/><br/>
+        <br/><br/>
+        
+        <h1>The PowerPuff Girl! Made with <span>&hearts; </span>with Pure CSS</h1>
+        
+        <br/><br/>
+    </body>
+</html>

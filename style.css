@@ -1,0 +1,385 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    color: #000000;
+    text-shadow: 1px 1px #38ACE5;
+    outline-style: dashed;
+    outline-color: rgba(0,0,0, 0.2);
+    outline-width: thin;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0, 0.1);
+    background-color: rgba(0,0,0, 0.1);
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+span {
+    color: #FF0000;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+#puff {
+    width: 500px;
+    height: 600px;
+    border: 1px solid #F0F9FC;
+    position: relative;
+    margin: auto;
+    margin-top: 5%;
+}
+
+/*              */
+/* Face styling */
+/*              */
+
+#outerFace {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    border: 6px solid black;
+    border-radius: 60%;
+    background-color: transparent;
+    left: calc(50% - 300px /2);
+    z-index: 3;   
+}
+
+#face {
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    border: 6px solid black;
+    border-radius: 60%;
+    background-color: #FCDDC9;
+    left: calc(50% - 300px /2);
+    z-index: 2;
+    overflow: hidden;
+}
+
+#flatHairLeft {
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    width: 180px;
+    height: 60px;
+    background-color: #FDED62;
+    border-radius: 200% 200% 200% 200%;
+    transform: rotate(-22deg);
+    border: 3px solid black;
+    z-index: 2;
+}
+
+#flatHairRight {
+    position: absolute;
+    right: -15px;
+    top: 5px;
+    width: 170px;
+    height: 60px;
+    background-color: #FDED62;
+    border-radius: 200% 200% 200% 200%;
+    transform: rotate(24deg);
+    border: 3px solid black;
+    z-index: 3;
+}
+
+#leftHair {
+    animation: animateLeftHair 0.5s infinite;
+}
+
+#leftHair, #rightHair {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #FDED62;
+    z-index: 1;
+    border: 6px solid black;
+    left: 70px;
+    top: -25px;
+    border-radius: 30% 80% 20% 15% / 19% 90% 2% 2%;
+    transform: rotate(-53deg);
+}
+
+#rightHair { 
+    left: 330px;
+    top: -25px;
+    border-radius: 30% 80% 20% 15% / 19% 90% 30% 2%;
+    transform: rotate(-40deg);
+    animation: animateRightHair 0.5s infinite;
+}
+
+#maskHair {
+    position: absolute;
+    width: 35px;
+    height: 34px;
+    background-color: #FDED62;
+    z-index: 9;
+    left: 126px;
+    top: -1px;
+    border-radius: 15px;
+}
+
+.eyeWrapper {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    z-index: -1;
+    top: 45px;
+    border: 2px solid black;
+}
+
+.eyeCover {
+    position: absolute;
+    width: 100px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #38ACE5;
+    left: 30px;
+    top: 5px;
+}
+
+.eyeInside {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: black;
+    left: 53px;
+    top: 30px;   
+}
+
+.eye {
+    position: absolute;
+    width: 30px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    left: 80px;
+    top: 50px;
+}
+
+.eyeRight {
+    top: 45px;
+    right: 0px;
+}
+
+#face .eyeWrapper.eyeRight .eyeCover {
+    background: red;
+    left: 0px;
+}
+
+#face .eyeWrapper.eyeRight .eyeInside {
+    left: 0px;
+}
+
+#face .eyeWrapper.eyeRight .eye {
+    left: 20px;
+}
+
+#nose {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    left: 135px;
+    top: 170px;
+    border-radius: 50%;
+    border-bottom: 3px solid black;
+    animation: animateNose 5s infinite;
+}
+
+/*                      */
+/* Upper body styling   */
+/*                      */
+
+#upperBody {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    background-color: #38ACE5;
+    top: 200px;
+    left: calc(50% - 100px /2);
+    border: 6px solid black;
+    border-radius: 40% 40% 0% 0%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#upperBody #middle, #maskMiddle {
+    position: absolute;
+    width: 170px;
+    height: 50px;
+    background-color: #000000;
+    top: 40%;
+    left: calc(50% - 170px /2);
+    border-radius: 0% 0% 80% 100%;
+}
+
+#upperBody #maskMiddle {
+    top: 15%;
+    background-color: #38ACE5;
+}
+
+#handsWrapper #leftHand, #rightHand {
+    position: absolute;
+    width: 60px;
+    height: 120px;
+    background-color: #FCDDC9; 
+    left: 175px;
+    top: 230px;
+    border-radius: 100% 100% 100% 100%;
+    border: 6px solid black;
+    transform: rotate(30deg);
+}
+
+#handsWrapper #rightHand { 
+    left: 300px;
+    top: 210px;
+    width: 40px;
+    transform: rotate(90deg);
+    animation: animateLeftHand 0.1s alternate infinite;
+}
+
+/*                      */
+/* Lower body styling   */
+/*                      */
+
+#lowerBody {
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    background-color: white;
+    border: 6px solid black;
+    top: 350px;
+    left: calc(50% - 100px / 2);
+}
+
+#lowerBody #legMiddle {
+    position: absolute;
+    height: 80px;
+    width: 4px;
+    background-color: #000000;
+    left: calc(50% - 2px);
+    transform: rotate(2deg);
+}
+
+#lowerBody #leftFeet, #rightFeet {
+    position: absolute;
+    width: 56px;
+    height: 60px;
+    background-color: #000000;
+    top: 70px;
+    left: -6px;
+    border-radius: 0% 0% 50% 50%;
+}
+
+#lowerBody #rightFeet {
+    left: 50%;
+}
+
+#lowerBody .feetDecoration {
+    background-color: #ffffff;
+    width: 40%;
+    height: 35%;
+    border-radius: 0% 0% 100% 100% / 10% 10% 200% 200%;
+    margin: auto;
+    margin-top: 4px;
+}
+
+/*                      */
+/* Animation Section    */
+/*                      */
+
+@keyframes animateLeftHand {
+    0% {
+        transform: rotate(90deg);
+        top: 210px;
+    }
+    25% {
+        transform: rotate(115deg);
+        top: 215px;
+    }
+    50% {
+        transform: rotate(130deg);
+        top: 225px;
+    }
+    75% {
+        transform: rotate(145deg);
+        top: 235px;
+    }
+    100% {
+        transform: rotate(160deg);
+        top: 245px;
+    }
+}
+
+@keyframes animateLeftHair {
+    0% {
+        transform: rotate(-53deg);
+        height: 100px;
+    }
+    25% {
+        transform: rotate(-57deg);
+        height: 110px;
+    }
+    50% {
+        transform: rotate(-61deg);
+        height: 120px;
+    }
+    75% {
+        transform: rotate(-57deg);
+        height: 110px;
+    }
+    100% {
+        transform: rotate(-53deg);
+        height: 100px;
+    }
+}
+
+@keyframes animateRightHair {
+    0% {
+        transform: rotate(-40deg);
+    }
+    25% {
+        transform: rotate(-44deg);
+    }
+    50% {
+        transform: rotate(-48deg);
+        left: 328px;
+    }
+    75% {
+        transform: rotate(-44deg);
+        left: 329px;
+    }
+    100% {
+        transform: rotate(-40deg);
+        left: 330px;
+    }
+}
+
+@keyframes animateNose {
+    0% {
+        width: 30px;
+        left: 135px;
+    }
+    25% {
+        width: 60px;
+        left: 120px;
+    }
+    50% {
+        width: 90px;
+        left: 105px;
+    }
+    75% {
+        width: 60px;
+        left: 120px;
+    }
+    100% {
+        width: 30px;
+        left: 135px;
+    }
+}
